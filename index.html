@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7f7f7" media="(prefers-color-scheme: light)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Motorsport Cal" />
+  <meta name="description" content="Countdown e dettagli dei prossimi eventi Formula 1 e MotoGP." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.svg" />
+  <title>Motorsport Countdown</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Tema automatico" title="Tema automatico">
+        <span id="theme-icon" aria-hidden="true">◐</span>
+      </button>
+      <p class="eyebrow">Motorsport Next Events</p>
+      <div class="widget-tabs" role="tablist" aria-label="Selezione widget">
+        <button type="button" class="widget-tab" role="tab" id="tab-f1" data-tab-target="f1" aria-selected="true" aria-controls="panel-f1">Formula 1</button>
+        <button type="button" class="widget-tab" role="tab" id="tab-motogp" data-tab-target="motogp" aria-selected="false" aria-controls="panel-motogp">MotoGP</button>
+        <button type="button" class="widget-tab" role="tab" id="tab-others" data-tab-target="others" aria-selected="false" aria-controls="panel-others">Others</button>
+        <button type="button" class="widget-tab" role="tab" id="tab-calendar" data-tab-target="calendar" aria-selected="false" aria-controls="panel-calendar">Calendar</button>
+      </div>
+    </header>
+
+    <section class="install-panel" id="install-panel" hidden>
+      <h2>Installa la Web App</h2>
+      <p id="install-copy">Aggiungi Motorsport Countdown alla Home per un accesso rapido.</p>
+      <div class="install-actions">
+        <button type="button" id="install-action" class="cta-button">Installa ora</button>
+        <button type="button" id="install-dismiss" class="ghost-button">Più tardi</button>
+      </div>
+    </section>
+
+    <section class="widgets-grid" aria-label="Widget countdown motorsport">
+      <article class="widget-card" id="panel-f1" role="tabpanel" aria-labelledby="tab-f1" data-tab-panel="f1">
+        <h2>Formula 1</h2>
+        <section class="next-event-card" aria-live="polite">
+          <p class="next-event-label">Prossimo evento nel tuo fuso orario</p>
+          <p class="next-event-title" id="next-event-f1-title">Caricamento…</p>
+          <p class="next-event-meta" id="next-event-f1-meta"></p>
+          <p class="next-event-time" id="next-event-f1-time"></p>
+          <a id="next-event-f1-link" class="next-event-link" href="https://motorsportscalendar.com/" target="_blank" rel="noopener noreferrer">Apri evento</a>
+        </section>
+        <div class="widget-fade-stack">
+          <div id="motorsports-calendar-countdown-f1-light" class="widget-host" data-widget-theme="light" aria-live="polite"
+            data-series="f1" data-theme="light" data-color="#c90021" data-display="full" data-weather-display="minimal"></div>
+          <div id="motorsports-calendar-countdown-f1-dark" class="widget-host" data-widget-theme="dark" aria-live="polite"
+            data-series="f1" data-theme="dark" data-color="#ffd100" data-display="full" data-weather-display="minimal"></div>
+        </div>
+      </article>
+
+      <article class="widget-card" id="panel-motogp" role="tabpanel" aria-labelledby="tab-motogp" data-tab-panel="motogp" hidden>
+        <h2>MotoGP</h2>
+        <section class="next-event-card" aria-live="polite">
+          <p class="next-event-label">Prossimo evento nel tuo fuso orario</p>
+          <p class="next-event-title" id="next-event-motogp-title">Caricamento…</p>
+          <p class="next-event-meta" id="next-event-motogp-meta"></p>
+          <p class="next-event-time" id="next-event-motogp-time"></p>
+          <a id="next-event-motogp-link" class="next-event-link" href="https://motorsportscalendar.com/" target="_blank" rel="noopener noreferrer">Apri evento</a>
+        </section>
+        <div class="widget-fade-stack">
+          <div id="motorsports-calendar-countdown-motogp-light" class="widget-host" data-widget-theme="light" aria-live="polite"
+            data-series="motogp" data-theme="light" data-color="#c90021" data-display="full" data-weather-display="minimal"></div>
+          <div id="motorsports-calendar-countdown-motogp-dark" class="widget-host" data-widget-theme="dark" aria-live="polite"
+            data-series="motogp" data-theme="dark" data-color="#ffd100" data-display="full" data-weather-display="minimal"></div>
+        </div>
+      </article>
+
+      <article class="widget-card widget-card-wide" id="panel-others" role="tabpanel" aria-labelledby="tab-others" data-tab-panel="others" hidden>
+        <h2>Rotation: IndyCar, WEC, Le Mans</h2>
+        <div class="widget-fade-stack">
+          <div id="motorsports-calendar-countdown-multi-light" class="widget-host" data-widget-theme="light" aria-live="polite"
+            data-series="indycar,wec,lemans" data-rotate="yes" data-rotate-interval="4000" data-theme="light" data-color="#c90021" data-display="full"></div>
+          <div id="motorsports-calendar-countdown-multi-dark" class="widget-host" data-widget-theme="dark" aria-live="polite"
+            data-series="indycar,wec,lemans" data-rotate="yes" data-rotate-interval="4000" data-theme="dark" data-color="#ffd100" data-display="full"></div>
+        </div>
+      </article>
+
+      <article class="widget-card widget-card-wide" id="panel-calendar" role="tabpanel" aria-labelledby="tab-calendar" data-tab-panel="calendar" hidden>
+        <h2>Calendario Mensile F1 & MotoGP</h2>
+        <section class="month-calendar" aria-label="Calendario eventi motorsport">
+          <div class="calendar-controls">
+            <button type="button" id="calendar-prev" class="calendar-nav-button" aria-label="Mese precedente">‹</button>
+            <p id="calendar-month-label" class="calendar-month-label">Caricamento…</p>
+            <button type="button" id="calendar-next" class="calendar-nav-button" aria-label="Mese successivo">›</button>
+          </div>
+          <div id="calendar-grid" class="calendar-grid" aria-live="polite"></div>
+        </section>
+        <section class="month-events" aria-label="Lista eventi del mese">
+          <h3>Eventi del mese</h3>
+          <ul id="month-events-list" class="month-events-list"></ul>
+        </section>
+      </article>
+    </section>
+
+    <footer class="app-footer">
+      <p>
+        Made with ❤️ by <a href="https://fcelsa.carrd.co/" target="_blank" rel="noopener noreferrer">fcelsa</a> ·
+        <a href="https://github.com/fcelsa" target="_blank" rel="noopener noreferrer" aria-label="GitHub fcelsa" class="github-link">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.3 9.43 7.88 10.96.58.1.79-.25.79-.56v-1.97c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.27.73-1.56-2.55-.29-5.22-1.28-5.22-5.68 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.48.12-3.08 0 0 .97-.31 3.18 1.19a11.07 11.07 0 0 1 5.8 0c2.2-1.5 3.17-1.19 3.17-1.19.64 1.6.24 2.79.12 3.08.75.81 1.2 1.84 1.2 3.1 0 4.41-2.68 5.39-5.24 5.67.41.36.78 1.08.78 2.19v3.24c0 .31.2.67.8.56A11.54 11.54 0 0 0 23.5 12C23.5 5.66 18.35.5 12 .5z" />
+          </svg>
+          GitHub
+        </a>
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script id="motorsport-calendar-widget-script" src="https://motorsportscalendar.com/widgets/countdown.js"></script>
+</body>
+
+</html>

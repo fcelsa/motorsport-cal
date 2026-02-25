@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Motorsport Countdown icon">
+  <rect width="192" height="192" rx="38" fill="#0b0b0b" />
+  <rect x="16" y="16" width="160" height="160" rx="30" fill="#141414" stroke="#ffd100" stroke-width="6" />
+  <path d="M34 132 C58 92, 102 74, 156 64" fill="none" stroke="#ffd100" stroke-width="12" stroke-linecap="round" />
+  <path d="M36 136 C68 100, 106 86, 158 76" fill="none" stroke="#2a2a2a" stroke-width="5" stroke-linecap="round" />
+  <g transform="translate(118 38)">
+    <rect x="0" y="0" width="44" height="34" rx="4" fill="#f5f5f5" />
+    <rect x="0" y="0" width="11" height="11" fill="#111" />
+    <rect x="22" y="0" width="11" height="11" fill="#111" />
+    <rect x="11" y="11" width="11" height="11" fill="#111" />
+    <rect x="33" y="11" width="11" height="11" fill="#111" />
+    <rect x="0" y="22" width="11" height="12" fill="#111" />
+    <rect x="22" y="22" width="11" height="12" fill="#111" />
+  </g>
+  <circle cx="48" cy="132" r="11" fill="#ffd100" />
+  <circle cx="48" cy="132" r="5" fill="#0b0b0b" />
+</svg>

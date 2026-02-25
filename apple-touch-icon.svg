@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Motorsport Countdown Apple touch icon">
+  <rect width="180" height="180" rx="36" fill="#ffffff" />
+  <rect x="15" y="15" width="150" height="150" rx="28" fill="#f3f3f3" stroke="#c90021" stroke-width="6" />
+  <path d="M30 126 C52 90, 92 74, 146 62" fill="none" stroke="#c90021" stroke-width="10" stroke-linecap="round" />
+  <path d="M32 130 C64 98, 100 84, 148 74" fill="none" stroke="#d9d9d9" stroke-width="4" stroke-linecap="round" />
+  <g transform="translate(112 35)">
+    <rect x="0" y="0" width="38" height="30" rx="4" fill="#ffffff" stroke="#e0e0e0" />
+    <rect x="0" y="0" width="10" height="10" fill="#111" />
+    <rect x="20" y="0" width="10" height="10" fill="#111" />
+    <rect x="10" y="10" width="10" height="10" fill="#111" />
+    <rect x="30" y="10" width="8" height="10" fill="#111" />
+    <rect x="0" y="20" width="10" height="10" fill="#111" />
+    <rect x="20" y="20" width="10" height="10" fill="#111" />
+  </g>
+  <circle cx="44" cy="126" r="9" fill="#c90021" />
+  <circle cx="44" cy="126" r="4" fill="#ffffff" />
+</svg>
